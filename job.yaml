@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sample-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: bharat-tls
+        image: 
+        imagePullPolicy: IfNotPresent
+        command: ['bash', '-c', 'echo "Hello, Kubernetes!" && sleep 3600']
+      restartPolicy: OnFailure
