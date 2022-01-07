@@ -1,2 +1,2 @@
-# docker-basics
+# Docker-Basics
 this repo include best practices requires to create docker files and related sample code.
