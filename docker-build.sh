@@ -1,7 +1,6 @@
-## this script will take IMAGE_NAME and TAG as a user input while building image
-
-
 #!/bin/bash
+
+## this script will take IMAGE_NAME and TAG as a user input while building image
 IMAGE_NAME=$1
 TAG=$2
 REPO_NAME=$3
