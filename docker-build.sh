@@ -6,8 +6,8 @@ TAG=$2
 REPO_NAME=$3
 
 sudo docker build -t $IMAGE_NAME:$TAG -f Dockerfile .
-sudo docker tag $IMAGE_NAME:$TAG $REPO_NAME/$IMAGE_NAME:TAG
-sudo docker push $REPO_NAME/$IMAGE_NAME:TAG
+sudo docker tag $IMAGE_NAME:$TAG $REPO_NAME/$IMAGE_NAME:$TAG
+sudo docker push $REPO_NAME/$IMAGE_NAME:$TAG
 
 echo "Image built and successfully and pushed to repository!!"
 
