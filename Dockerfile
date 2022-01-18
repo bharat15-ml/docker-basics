@@ -1,4 +1,4 @@
-FROM UBUNTU:18.04
+FROM ubuntu:18.04
 
 ## include update and install in same layer; this will help on mismatch of installed software versions
 RUN apt update && apt install -y \
@@ -22,7 +22,7 @@ RUN useradd testuser -m
 
 ## logic to create secret to switch between root user and new user
 COPY rootsecret /tmp/
-RUN /bin/bash /tmp/rootsecret && rm /tmp /rootsecret
+RUN /bin/bash /tmp/rootsecret && rm /tmp/rootsecret
 
 ## add entrypoint.sh to home directory
 copy entrypoint.sh /home/testuser/
